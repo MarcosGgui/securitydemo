@@ -24,17 +24,14 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 @Configuration
 @EnableAutoConfiguration
-public class ACLContext{
+public class ACLContext {
 
   @Autowired
   DataSource dataSource;
 
   @Bean
   public EhCacheBasedAclCache aclCache() {
-    return new EhCacheBasedAclCache(
-        aclEhCacheFactoryBean().getObject(),
-        permissionGrantingStrategy(),
-        aclAuthorizationStrategy());
+    return new EhCacheBasedAclCache(aclEhCacheFactoryBean().getObject(), permissionGrantingStrategy(), aclAuthorizationStrategy());
   }
 
   @Bean
