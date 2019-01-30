@@ -7,6 +7,7 @@ import javax.persistence.Table;
 
 /**
  * NoticeMessage: Entity of NoticeMessage
+ *
  * @author marcosgui
  */
 @Entity

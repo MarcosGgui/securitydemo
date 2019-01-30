@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 @EnableJpaRepositories(basePackages = "com.spring.security.securitydemo.repository")
 @PropertySource("classpath:application.yml")
-@EntityScan(basePackages={ "com.spring.security.securitydemo.domain" })
-public class JPAPersistenceConfig {
+@EntityScan(basePackages = {"com.spring.security.securitydemo.domain"})
+public class JPAPersistenceConfig{
 
 }
