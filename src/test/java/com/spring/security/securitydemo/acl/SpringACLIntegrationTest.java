@@ -9,6 +9,7 @@ import java.util.List;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.access.AccessDeniedException;
@@ -31,6 +32,7 @@ import org.springframework.test.context.web.ServletTestExecutionListener;
     DirtiesContextTestExecutionListener.class,
     TransactionalTestExecutionListener.class,
     WithSecurityContextTestExecutionListener.class})
+@SpringBootTest(properties = "spring.profiles.active=test")
 public class SpringACLIntegrationTest extends AbstractJUnit4SpringContextTests{
   private static Integer FIRST_MESSAGE_ID = 1;
   private static Integer SECOND_MESSAGE_ID = 2;
