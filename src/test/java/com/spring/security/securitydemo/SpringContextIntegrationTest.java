@@ -6,11 +6,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
-public class SecuritydemoApplicationTests{
+@SpringBootTest( classes = SecuritydemoApplication.class)
+public class SpringContextIntegrationTest{
 
   @Test
-  public void contextLoads() {
+  public void whenSpringContextIsBootstrapped_thenNoExceptions() {
   }
 }
 
